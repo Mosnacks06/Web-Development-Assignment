@@ -51,3 +51,8 @@
     width: 100%;
     visibility: visible;
 }
+
+.main-image {
+    background-image: url("AND_WANDER_1.webp");
+    background-color: #ffffff;
+}
