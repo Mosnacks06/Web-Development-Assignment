@@ -53,6 +53,15 @@
 }
 
 .main-image {
-    background-image: url("AND_WANDER_1.webp");
-    background-color: #ffffff;
+  position: relative;
+  height: 80vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("../Images/AND_WANDER_1.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.button-main {
+    
 }
