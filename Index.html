@@ -11,7 +11,7 @@
     crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="showCart">
 
   <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-dark">
     <div class="container-fluid p-0">
@@ -41,7 +41,7 @@
               <a class="nav-link mx-lg-2" href="#"><i class="fa-solid fa-heart fa-2x"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-lg-2" href="#"><i class="fa-solid fa-basket-shopping fa-2x"></i></a>
+              <a class="nav-link mx-lg-2" href="#"><i class="fa-solid fa-basket-shopping fa-2x"></i><span>0</span></a>
             </li>
           </ul>
 
@@ -54,6 +54,35 @@
     </div>
   </nav>
 
+ <div class="cartTab">
+  <h1>Shopping Cart</h1>
+
+  <div class="ListCart">
+    <div class="item">
+
+      <div class="image">
+        <img src="Assets/Images/Jacket display 2.webp" alt="">
+      </div>
+
+      <div class="name">NAME</div>
+
+      <div class="totalPrice">$200</div>
+
+      <div class="quantity">
+        <span class="minus">-</span>
+        <span>1</span>
+        <span class="plus">+</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="btn">
+    <button class="close">CLOSE</button>
+    <button class="checkOut">CHECK OUT</button>
+  </div>
+</div>
+
   <div class="main-image">
           <button type="button" class="btn btn-light btn-lg button-explore">Explore</button>
   </div>
@@ -61,7 +90,7 @@
 <div class="container p-5">
   <div class="row g-4">
 
-     <div class="col-md-4">
+    <div class="col-md-4">
       <div class="card border-0 rounded-0 shadow" style="max-width: 18rem">
         <img src="Assets/Images/Jacket display 2.webp" class="card-img-top rounded-0">
         <div class="card-body my-3">
@@ -187,6 +216,6 @@
   </div>
 
 </footer>
-
+  <script src="app.js"></script>
 </body>
 </html>
