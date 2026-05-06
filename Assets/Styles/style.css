@@ -74,14 +74,21 @@
   right: -400px;
   bottom: 0;
   z-index: 1050;
+  transition: .5s;
 
   display: grid;
   grid-template-rows: 70px 1fr 70px;
   overflow: hidden;
 }
 
-body .showCart .cartTab {
-    inset: 0 0 0 auto;
+/* SHOW CART */
+body.showCart .cartTab {
+  right: 0;
+}
+
+/* PUSH PAGE LEFT */
+body.showCart .container {
+  transform: translateX(-250px);
 }
 
 /* CART TITLE */
