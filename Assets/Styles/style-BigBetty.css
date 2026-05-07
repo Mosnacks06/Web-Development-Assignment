@@ -14,7 +14,6 @@
 
 /*Login Button CSS */
 
-
 .navbar-toggler {
     border: none;
     font-size: 1.25rem;
@@ -156,4 +155,3 @@ body.showCart .container {
 .ListCart::-webkit-scrollbar {
     width: 0;
 }
-
