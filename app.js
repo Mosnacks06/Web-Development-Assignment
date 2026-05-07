@@ -29,19 +29,67 @@ const addDataToHTML = () => {
   ListProductHTML.innerHTML = '';
 
   if (ListProduct.length > 0) {
+
     ListProduct.forEach(vproduct => {
+
       let newProduct = document.createElement('div');
-      newProduct.classList.add('item');
+
+      // Bootstrap column
+      newProduct.classList.add('col-md-4');
 
       newProduct.innerHTML = `
-        <img src="${vproduct.image}">
-        <h5>${vproduct.name}</h5>
-        <p>$${vproduct.price}</p>
-        <button class="addCart">Add to Cart</button>
+      
+      <div class="card border-0 rounded-0 shadow h-100">
+
+        <img src="${vproduct.image}" class="card-img-top rounded-0">
+
+        <div class="card-body my-3">
+
+          <div class="row">
+
+            <div class="col-10">
+              <h4 class="card-title">${vproduct.name}</h4>
+
+              <p class="card-text">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+            </div>
+
+            <div class="col-2">
+              <i class="fa-solid fa-heart fa-lg"></i>
+            </div>
+
+            <div class="row align-items-center text-center">
+
+              <div class="col-4">
+                <h5>$${vproduct.price}</h5>
+              </div>
+
+              <div class="col-8">
+                <button 
+                  class="btn btn-dark text-warning p-3 w-100 rounded-0 addCart"
+                  data-id="${vproduct.id}"
+                >
+                  ADD TO CART
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
       `;
 
       ListProductHTML.appendChild(newProduct);
+
     });
+
   }
 };
 
@@ -65,3 +113,4 @@ const initApp = () => {
 };
 
 initApp();
+

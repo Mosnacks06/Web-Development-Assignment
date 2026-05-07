@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head Section -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,9 @@
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Document</title>
 </head>
-<body class="">
-
+<!-- Main Content -->
+<body class="px-0">
+  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-dark px-4 py-3">
     <div class="container-fluid p-0">
       <a class="navbar-brand me-auto" href="#"><Label>Logo</Label></a>
@@ -22,7 +24,7 @@
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        
+
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
             <form class="d-flex" role="search">
@@ -48,7 +50,6 @@
               <a class="nav-link mx-lg-2" href="product.html">Shop</a>
             </li>
           </ul>
-
         </div>
       </div>
       <a href="#" class="Login-Button">Login</a>
@@ -58,153 +59,205 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
     <div class="container">
       <div class="row">
         <div class="col-12">
-        <h1 data-aos="fade-left" class="text-uppercase text-white fw-semibold display-1">Welcome to BrandName</h1>
-        <h5 class="text-white mt-3 mb-4" data-aos="fade-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quos?</h5>
+          <h1 data-aos="fade-left" class="text-uppercase text-white fw-semibold display-1">Welcome to NOVA</h1>
+          <h5 class="text-white mt-3 mb-4" data-aos="fade-right">Modern gear for modern adventures.</h5>
         </div>
-        <div data-aos="fade-up" data-aos-delay="50"> 
+        <div data-aos="fade-up" data-aos-delay="50">
           <a href="product.html" class="btn btn-brand btn-light me-2">Explore</a>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Shopping Cart -->
   <div class="cartTab">
-  <h1>Shopping Cart</h1>
+    <h1>Shopping Cart</h1>
 
-  <div class="ListCart">
-    <div class="item">
+    <div class="ListCart">
+      <div class="item">
 
-      <div class="image">
-        <img src="Assets/Images/Jacket display 2.webp" alt="">
-      </div>
+        <div class="image">
+          <img src="Assets/Images/Jacket display 2.webp" alt="">
+        </div>
 
-      <div class="name">NAME</div>
+        <div class="name">NAME</div>
 
-      <div class="totalPrice">$200</div>
+        <div class="totalPrice">$200</div>
 
-      <div class="quantity">
-        <span class="minus">-</span>
-        <span>1</span>
-        <span class="plus">+</span>
+        <div class="quantity">
+          <span class="minus">-</span>
+          <span class="value">1</span>
+          <span class="plus">+</span>
+        </div>
       </div>
 
     </div>
+    <div class="btn">
+      <button class="close">CLOSE</button>
+      <button class="checkOut">CHECK OUT</button>
+    </div>
   </div>
+  
+  <!-- Product List -->
+  <div class="container py-5">
+    <h3>Suggestions</h3>
+    <div class="ListProduct"></div>
+    <div class="row g-4">
 
-  <div class="btn">
-    <button class="close">CLOSE</button>
-    <button class="checkOut">CHECK OUT</button>
+      <!-- Product Card 1 -->
+      <div class="col-md-4">
+        <div class="card border-0 rounded-0 shadow" style="max-width: 18rem">
+          <img src="Assets/Images/Jacket display 2.webp" class="card-img-top rounded-0">
+          <div class="card-body my-3">
+            <div class="row">
+              <div class="col-10">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+              <div class="col-2">
+                <i class="fa-solid fa-heart fa-lg"></i>
+              </div>
+              <div class="row align-item-center text-center">
+                <div class="col-4">
+                  <h5>124$</h5>
+                </div>
+                <div class="col-8">
+                  <a href="" class="btn btn-dark text-warning p-3 w-100 rounded-0 addCart">ADD TO CART</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Product Card 2 -->
+      <div class="col-md-4">
+        <div class="card border-0 rounded-0 shadow" style="max-width: 18rem">
+          <img src="Assets/Images/Jacket display 2.webp" class="card-img-top rounded-0">
+          <div class="card-body my-3">
+            <div class="row">
+              <div class="col-10">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+              <div class="col-2">
+                <i class="fa-solid fa-heart fa-lg"></i>
+              </div>
+              <div class="row align-item-center text-center">
+                <div class="col-4">
+                  <h5>124$</h5>
+                </div>
+                <div class="col-8">
+                  <a href="" class="btn btn-dark text-warning p-3 w-100 rounded-0 addCart">ADD TO CART</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <!-- Product Card 3 -->
+      <div class="col-md-4">
+        <div class="card border-0 rounded-0 shadow" style="max-width: 18rem">
+          <img src="Assets/Images/Jacket display 2.webp" class="card-img-top rounded-0">
+          <div class="card-body my-3">
+            <div class="row">
+              <div class="col-10">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+              <div class="col-2">
+                <i class="fa-solid fa-heart fa-lg"></i>
+              </div>
+              <div class="row align-item-center text-center">
+                <div class="col-4">
+                  <h5>124$</h5>
+                </div>
+                <div class="col-8">
+                  <a href="" class="btn btn-dark text-warning p-3 w-100 rounded-0 addCart">ADD TO CART</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-  
-<div class="container p-5">
-  <div class="ListProduct"></div>
-  <div class="row g-4">
 
-    <div class="col-md-4">
-      <div class="card border-0 rounded-0 shadow" style="max-width: 18rem">
-        <img src="Assets/Images/Jacket display 2.webp" class="card-img-top rounded-0">
-        <div class="card-body my-3">
-          <div class="row">
-            <div class="col-10"> <h4 class="card-title">Card title</h4>
-          <p class="card-text">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </p></div>
-            <div class="col-2"><i class="fa-solid fa-heart fa-lg"></i>
-            </div>
-            <div class="row align-item-center text-center">
-              <div class="col-4">
-                <h5>124$</h5>
-              </div>
-              <div class="col-8"><a href="" class="btn btn-dark text-warning p-3 w-100 
-                rounded-0">ADD TO CART</a></div>
-            </div>
-          </div>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-4 ">
+    <div class="container px-4">
+      <div class="row">
+        <div class="col-6 col-lg-3">
+          <h3>logo</h3>
+        </div>
+        <div class="col">
+          <h4 class="pt-3 fw-bold">Menu</h4>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>09876542</p>
+          <p class="mb-0">34567896</p>
+        </div>
+        <div class="col">
+          <h4 class="pt-3 fw-bold">Menu</h4>
+          <ul class="list-unstyled">
+            <li><a href="" class="text-decoration-none text-light">link</a></li>
+            <li><a href="" class="text-decoration-none text-light">link</a></li>
+            <li><a href="" class="text-decoration-none text-light" >link</a></li>
+            <li><a href="" class="text-decoration-none text-light">link</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4 class="pt-3">Menu</h4>
+          <ul class="list-unstyled">
+            <li><a href="" class="text-decoration-none text-light" >link</a></li>
+            <li><a href="" class="text-decoration-none text-light" >link</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3 text-lg-end">
+          <h4>Menu</h4>
+          <ul class="list-unstyled">
+            <li><a href="" class="text-decoration-none text-light" >link</a></li>
+            <li><a href="" class="text-decoration-none text-light" >link</a></li>
+            <li><a href="" class="text-decoration-none text-light" >link</a></li>
+            <li><a href="" class="text-decoration-none text-light" >link</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-
-<div class="col-md-4">
-  <div class="ListProduct"></div>
-      <div class="card border-0 rounded-0 shadow" style="max-width: 18rem">
-        <img src="Assets/Images/Jacket display 2.webp" class="card-img-top rounded-0">
-        <div class="card-body my-3">
-          <div class="row">
-            <div class="col-10"> <h4 class="card-title">Card title</h4>
-          <p class="card-text">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </p></div>
-            <div class="col-2"><i class="fa-solid fa-heart fa-lg"></i>
-            </div>
-            <div class="row align-item-center text-center">
-              <div class="col-4">
-                <h5>124$</h5>
-              </div>
-              <div class="col-8"><a href="" class="btn btn-dark text-warning p-3 w-100 
-                rounded-0">ADD TO CART</a></div>
-            </div>
-          </div>
-        </div>
+      <hr>
+      <div class="d-flex justify-content-between">
+        <p>2026 moses scerri 5.1B</p>
       </div>
     </div>
+  </footer>
 
-<footer class="bg-dark text-light py-4 width-400">
-  <div class="container px-4">
-    <div class="row">
-      <div class="col-6 col-lg-3">
-        <h3>logo</h3>
-      </div>
-      <div class="col">
-        <h4 class="pt-3 fw-bold">Menu</h4>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>09876542</p>
-        <p class="mb-0">34567896</p>
-      </div>
-      <div class="col">
-        <h4 class="pt-3 fw-bold">Menu</h4>
-        <ul class="list-unstyled">
-          <li><a href="" class="text-decoration-none text-light">link</a></li>
-          <li><a href="" class="text-decoration-none text-light">link</a></li>
-          <li><a href="" class="text-decoration-none text-light" >link</a></li>
-          <li><a href="" class="text-decoration-none text-light">link</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <h4 class="pt-3">Menu</h4>
-        <ul class="list-unstyled">
-          <li><a href="" class="text-decoration-none text-light" >link</a></li>
-          <li><a href="" class="text-decoration-none text-light" >link</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-lg-3 text-lg-end">
-        <h4>Menu</h4>
-        <ul class="list-unstyled">
-          <li><a href="" class="text-decoration-none text-light" >link</a></li>
-          <li><a href="" class="text-decoration-none text-light" >link</a></li>
-          <li><a href="" class="text-decoration-none text-light" >link</a></li>
-          <li><a href="" class="text-decoration-none text-light" >link</a></li>
-        </ul>
-      </div>
-    </div>
-    <hr>
-    <div class="d-flex justify-content-between">
-      <p>2026 moses scerri 5.1B</p>
-    </div>
-  </div>
-
-</footer>
-
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="app.js"></script>
 </body>

@@ -1,3 +1,6 @@
+/* ========================================
+   LOGIN BUTTON STYLES
+   ======================================== */
 .Login-Button {
     background-color: green;
     color: white;
@@ -12,8 +15,9 @@
     background-color: rgb(19, 212, 19);
 }
 
-/*Login Button CSS */
-
+/* ========================================
+   NAVBAR STYLES
+   ======================================== */
 
 .navbar-toggler {
     border: none;
@@ -53,6 +57,13 @@
     visibility: visible;
 }
 
+
+
+
+/* ========================================
+   SHOPPING CART STYLES
+   ======================================== */
+
 /* CART CONTAINER */
 .cartTab {
   width: 400px;
@@ -76,9 +87,7 @@ body.showCart .cartTab {
 }
 
 /* PUSH PAGE LEFT */
-body.showCart .container {
-  transform: translateX(-250px);
-}
+
 
 /* CART TITLE */
 .cartTab h1 {
@@ -95,9 +104,10 @@ body.showCart .container {
 /* CART ITEM */
 .cartTab .ListCart .item {
   display: grid;
-  grid-template-columns: 70px 1fr 60px 80px;
+  grid-template-columns: 70px 150px 50px 1fr;
   gap: 10px;
   align-items: center;
+  text-align: center;
   padding: 10px;
   border-bottom: 1px solid #333;
 }
@@ -109,20 +119,30 @@ body.showCart .container {
   object-fit: cover;
   border-radius: 5px;
 }
+.card-img-top {
+    height: 400px;
+    object-fit: cover;
+}
 
 /* QUANTITY */
-.ListCart .quantity span {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-  width: 25px;
-  height: 25px;
+.quantity span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  background: #eee;
-  color: #000;
-  border-radius: 50%;
-  cursor: pointer;
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+    background: #eee;
+    color: #000;
+    cursor: pointer;
 }
 
 /* BUTTONS */
@@ -145,8 +165,21 @@ body.showCart .container {
     width: 0;
 }
 
+/* ========================================
+   HERO SECTION STYLES
+   ======================================== */
+
 #hero {
   background: linear-gradient(rgba(0, 0, 0, 0.267), rgba(0, 0, 0, 0.376)), url(../Images/AND_WANDER_1.webp);
   background-position: center;
   background-size: cover;
+}
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
+.footer{
+    margin-top: 80px;
+    color: #eee;
+    text-decoration: none;
+    transition: 0.3s;
 }
