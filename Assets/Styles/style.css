@@ -53,18 +53,6 @@
     visibility: visible;
 }
 
-.main-image {
-    height: 100vh;
-    background-image: url("../Images/AND_WANDER_1.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /* CART CONTAINER */
 .cartTab {
   width: 400px;
@@ -157,3 +145,8 @@ body.showCart .container {
     width: 0;
 }
 
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.267), rgba(0, 0, 0, 0.376)), url(../Images/AND_WANDER_1.webp);
+  background-position: center;
+  background-size: cover;
+}
