@@ -1,13 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/Styles/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — NOVA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="Assets/Styles/style.css">
 </head>
 <body>
+
+  <!-- ── Navbar (same as index) ── -->
+  <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-dark px-4 py-3">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand me-auto" href="Index.html"><label>Logo</label></a>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form class="d-flex flex-grow-1 mx-4" role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
+          </form>
+          <ul class="navbar-nav d-flex flex-row align-items-center gap-2 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="Index.html"><i class="fa-solid fa-house fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="account.html"><i class="fa-solid fa-circle-user fa-2x"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link open-saved" href="#"><i class="fa-solid fa-heart fa-2x"></i><span>0</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa-solid fa-basket-shopping fa-2x icon-cart"></i><span>0</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Shop</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="Login-Button">Login</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Cart Panel ── -->
+  <div class="cartTab">
+    <h1>Shopping Cart</h1>
+    <div class="ListCart"></div>
+    <div class="btn">
+      <button class="close">CLOSE</button>
+      <button class="checkOut">CHECK OUT</button>
+    </div>
+  </div>
+
+  <!-- ── Saved Panel ── -->
+  <div class="savedTab">
+    <h1>Saved Items</h1>
+    <div class="ListSaved"></div>
+    <div class="btn">
+      <button class="closeSaved">CLOSE</button>
+      <button class="moveAllToCart">ADD ALL TO CART</button>
+    </div>
+  </div>
+
+  <!-- ── Product Detail ── -->
+  <div class="product-page">
+
+    <!-- Left: Gallery -->
+    <div class="gallery">
+      <div class="main-image-wrap">
+        <img id="mainImage" src="" alt="Product image">
+      </div>
+      <div class="thumbnails" id="thumbnails"></div>
+    </div>
+
+    <!-- Right: Info -->
+    <div class="info">
+      <p class="brand">NOVA</p>
+      <h1 id="productName">Loading…</h1>
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <span>4.0 (28 reviews)</span>
+      </div>
+      <p class="price" id="productPrice"></p>
+
+      <!-- Colors -->
+      <div id="colorSection" style="display:none">
+        <div class="label-row">
+          <span>Color</span>
+          <span class="selected-label" id="colorLabel"></span>
+        </div>
+        <div class="colors" id="colorSwatches"></div>
+      </div>
+
+      <!-- Sizes -->
+      <div id="sizeSection" style="display:none">
+        <div class="label-row">
+          <span>Size</span>
+          <span class="selected-label" id="sizeLabel"></span>
+        </div>
+        <div class="sizes" id="sizeBtns"></div>
+        <p class="size-error" id="sizeError">Please select a size</p>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button class="btn-add-cart" id="btnAddCart">Add to Cart</button>
+        <button class="btn-save" id="btnSave" title="Save for later">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+      </div>
+
+      <!-- Description -->
+      <div class="description" id="productDescription"></div>
+    </div>
+
+  </div>
+
+  <script>
     
+  </script>
 </body>
 </html>

@@ -15,49 +15,35 @@
 </head>
 <!-- Main Content -->
 <body class="px-0">
-  <!-- Navigation -->
+  <!-- ── Navbar ── -->
   <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-dark px-4 py-3">
     <div class="container-fluid p-0">
-      <a class="navbar-brand me-auto" href="#"><Label>Logo</Label></a>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <a class="navbar-brand me-auto" href="Index.html"><label style="cursor:pointer">Logo</label></a>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <h5 class="offcanvas-title">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
-
         <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <li class="nav-item">
-              <a class="nav-link mx-lg-2 "href="Index.html"><i class="fa-solid fa-house fa-2x"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-lg-2" href="account.html"><i class="fa-solid fa-circle-user fa-2x"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-lg-2" href="#"><i class="fa-solid fa-location-dot fa-2x"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-lg-2" href="#"><i class="fa-solid fa-heart fa-2x"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-lg-2" href="#"><i class="fa-solid fa-basket-shopping fa-2x icon-cart"></i><span>0</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-lg-2" href="product.html">Shop</a>
-            </li>
+          <form class="d-flex flex-grow-1 mx-4" role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
+          </form>
+          <ul class="navbar-nav d-flex flex-row align-items-center gap-2 ms-auto">
+            <li class="nav-item"><a class="nav-link" href="Index.html"><i class="fa-solid fa-house fa-2x"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="account.html"><i class="fa-solid fa-circle-user fa-2x"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-heart fa-2x"></i><span>0</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-basket-shopping fa-2x icon-cart"></i><span>0</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="product.html">Shop</a></li>
           </ul>
         </div>
       </div>
       <a href="#" class="Login-Button">Login</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
   </nav>
+
 
   <!-- Hero Section -->
   <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
@@ -82,7 +68,7 @@
       <div class="item">
 
         <div class="image">
-          <img src="Assets/Images/Jacket display 2.webp" alt="">
+          <img src="Assets/Images/Jacket-display-2.webp" alt="">
         </div>
 
         <div class="name">NAME</div>
@@ -102,112 +88,33 @@
       <button class="checkOut">CHECK OUT</button>
     </div>
   </div>
+
+
+
+<div class="savedTab">
+  <h1>Saved Items</h1>
+  <div class="ListSaved"></div>
+  <div class="btn">
+    <button class="closeSaved">CLOSE</button>
+    <button class="moveAllToCart">ADD ALL TO CART</button>
+  </div>
+</div>
+
+
   
   <!-- Product List -->
   <div class="container py-5">
     <h3>Suggestions</h3>
-    <div class="ListProduct"></div>
-    <div class="row g-4">
-
-      <!-- Product Card 1 -->
-      <div class="col-md-4">
-        <div class="card border-0 rounded-0 shadow" style="max-width: 18rem">
-          <img src="Assets/Images/Jacket display 2.webp" class="card-img-top rounded-0">
-          <div class="card-body my-3">
-            <div class="row">
-              <div class="col-10">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </p>
-              </div>
-              <div class="col-2">
-                <i class="fa-solid fa-heart fa-lg"></i>
-              </div>
-              <div class="row align-item-center text-center">
-                <div class="col-4">
-                  <h5>124$</h5>
-                </div>
-                <div class="col-8">
-                  <a href="" class="btn btn-dark text-warning p-3 w-100 rounded-0 addCart">ADD TO CART</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <!-- Product Card 2 -->
-      <div class="col-md-4">
-        <div class="card border-0 rounded-0 shadow" style="max-width: 18rem">
-          <img src="Assets/Images/Jacket display 2.webp" class="card-img-top rounded-0">
-          <div class="card-body my-3">
-            <div class="row">
-              <div class="col-10">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </p>
-              </div>
-              <div class="col-2">
-                <i class="fa-solid fa-heart fa-lg"></i>
-              </div>
-              <div class="row align-item-center text-center">
-                <div class="col-4">
-                  <h5>124$</h5>
-                </div>
-                <div class="col-8">
-                  <a href="" class="btn btn-dark text-warning p-3 w-100 rounded-0 addCart">ADD TO CART</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-        <!-- Product Card 3 -->
-      <div class="col-md-4">
-        <div class="card border-0 rounded-0 shadow" style="max-width: 18rem">
-          <img src="Assets/Images/Jacket display 2.webp" class="card-img-top rounded-0">
-          <div class="card-body my-3">
-            <div class="row">
-              <div class="col-10">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </p>
-              </div>
-              <div class="col-2">
-                <i class="fa-solid fa-heart fa-lg"></i>
-              </div>
-              <div class="row align-item-center text-center">
-                <div class="col-4">
-                  <h5>124$</h5>
-                </div>
-                <div class="col-8">
-                  <a href="" class="btn btn-dark text-warning p-3 w-100 rounded-0 addCart">ADD TO CART</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class=" row g-4 ListProduct"></div>
+  <div class="row g-4">
+    <!-- Product Card 1 -->
+    <div class="col-md-4"> ... </div>
+    <!-- Product Card 2 -->
+    <div class="col-md-4"> ... </div>
+    <!-- Product Card 3 -->
+    <div class="col-md-4"> ... </div>
   </div>
-</div>
+      </div>
 
 
 

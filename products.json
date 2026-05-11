@@ -1,6 +1,21 @@
-{
+[
+  {
     "id": 1,
-    "name": "cool jacket",
+    "name": "Cool Jacket",
     "price": 350,
     "image": "Assets/Images/Jacket display 2.webp"
-}
+  },
+  {
+    "id": 2,
+    "name": "Trail Vest",
+    "price": 180,
+    "image": "Assets/Images/Jacket display 2.webp"
+  },
+  {
+    "id": 3,
+    "name": "Alpine Hoodie",
+    "price": 220,
+    "image": "Assets/Images/Jacket display 2.webp"
+  }
+]
+
