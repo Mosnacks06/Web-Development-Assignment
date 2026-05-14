@@ -17,6 +17,43 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => toast.remove(), 3100);
   };
 
+  // Cart and saved drawers
+  const body = document.body;
+  const iconCart = document.querySelector('.icon-cart');
+  const closeCart = document.querySelector('.cartTab .close');
+  const openSaved = document.querySelector('.open-saved');
+  const closeSaved = document.querySelector('.closeSaved');
+  const listCart = document.querySelector('.ListCart');
+  const listSaved = document.querySelector('.ListSaved');
+
+  if (listCart) {
+    listCart.innerHTML = '<p style="padding:20px;color:#aaa;">Your cart is empty.</p>';
+  }
+
+  if (listSaved) {
+    listSaved.innerHTML = '<p style="padding:20px;color:#aaa;">No saved items yet.</p>';
+  }
+
+  iconCart?.addEventListener('click', (event) => {
+    event.preventDefault();
+    body.classList.toggle('showCart');
+    body.classList.remove('showSaved');
+  });
+
+  closeCart?.addEventListener('click', () => {
+    body.classList.remove('showCart');
+  });
+
+  openSaved?.addEventListener('click', (event) => {
+    event.preventDefault();
+    body.classList.toggle('showSaved');
+    body.classList.remove('showCart');
+  });
+
+  closeSaved?.addEventListener('click', () => {
+    body.classList.remove('showSaved');
+  });
+
   // ── Tab switching ─────────────────────────────────────────────────────────────
   $$('.sidebar-nav a[data-tab]').forEach(link => {
     link.addEventListener('click', e => {

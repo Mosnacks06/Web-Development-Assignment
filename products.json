@@ -1,17 +1,18 @@
 [
   {
     "id": 1,
-    "name": "Cool Jacket",
+    "name": "Waterproof Jacket",
     "category": "jacket",
     "price": 350,
     "oldPrice": 410,
     "badge": "Sale",
-    "image": "Assets/Images/Jacket display 2.webp",
+    "image": "Assets/Images/Waterproof_jacket_1.webp",
     "images": [
-      "Assets/Images/Jacket display 2.webp",
-      "Assets/Images/Jacket display.jpg"
+      "Assets/Images/Waterproof_jacket_1.webp",
+      "Assets/Images/Waterproof_jacket_1_back.webp",
+      "Assets/Images/Waterproof_jacket_1_zoom.webp"
     ],
-    "description": "A weather-ready jacket with a structured fit, warm lining, and practical storage for cold outdoor days.",
+    "description": "A weather-ready waterproof jacket with a clean fit, durable shell, and practical protection for wet outdoor days.",
     "sizes": [
       { "label": "XS", "available": true },
       { "label": "S", "available": true },
@@ -26,15 +27,15 @@
   },
   {
     "id": 2,
-    "name": "Trail Vest",
-    "category": "vest",
+    "name": "Ruck Sack",
+    "category": "backpack",
     "price": 180,
-    "image": "Assets/Images/Bag display.webp",
+    "image": "Assets/Images/Ruck_Sack.webp",
     "images": [
-      "Assets/Images/Bag display.webp",
-      "Assets/Images/camping.webp"
+      "Assets/Images/Ruck_Sack.webp",
+      "Assets/Images/Ruck_Sack_Back.webp"
     ],
-    "description": "A lightweight layer for quick hikes, travel days, and changing weather.",
+    "description": "A practical ruck sack with front and back storage views, built for day trips, school, and trail gear.",
     "sizes": [
       { "label": "XS", "available": false },
       { "label": "S", "available": true },
@@ -49,16 +50,16 @@
   },
   {
     "id": 3,
-    "name": "Alpine Hoodie",
-    "category": "hoodie",
+    "name": "Hiking Boots",
+    "category": "boots",
     "price": 220,
     "badge": "New",
-    "image": "Assets/Images/AND_WANDER_1.webp",
+    "image": "Assets/Images/Hiking_Boots.webp",
     "images": [
-      "Assets/Images/AND_WANDER_1.webp",
-      "Assets/Images/Camping main page.jpg"
+      "Assets/Images/Hiking_Boots.webp",
+      "Assets/Images/Hiking_Boots_Pair.webp"
     ],
-    "description": "A soft technical hoodie with a relaxed fit, made for layering before and after the trail.",
+    "description": "Supportive hiking boots with a rugged sole and paired product view for reliable grip on uneven ground.",
     "sizes": [
       { "label": "XS", "available": true },
       { "label": "S", "available": true },

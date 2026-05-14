@@ -4,11 +4,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap');
 
-/* Variables (--bg, --surface, --border, --accent, --text,
-   --muted, --danger, --success) live in theme.css.
-   Only page-specific tokens here. */
+:root {
+  --bg: #0e0e0e;
+  --surface: #161616;
+  --surface2: #1e1e1e;
+  --border: #2a2a2a;
+  --accent: #e8bc0e;
+  --text: #f0ede8;
+  --muted: #777;
+  --danger: #e05;
+  --success: #2ecc71;
+  --radius: 2px;
+}
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scrollbar-gutter: stable;
+}
 
 body {
   background: var(--bg);
@@ -16,6 +29,174 @@ body {
   font-family: 'DM Sans', sans-serif;
   padding-top: 80px;
   min-height: 100vh;
+}
+
+.Login-Button {
+  background-color: var(--accent);
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color .2s, opacity .2s;
+}
+
+.Login-Button:hover {
+  background-color: #ffd336;
+  color: #000;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--border);
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: rgba(255,255,255,.72);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--accent);
+}
+
+.navbar .offcanvas {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.navbar .form-control {
+  background: var(--surface2);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.navbar .form-control::placeholder {
+  color: var(--muted);
+}
+
+.badge-count {
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--accent);
+  color: #000;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -4px;
+  vertical-align: top;
+}
+
+.cartTab,
+.savedTab {
+  width: 400px;
+  background-color: #000;
+  color: white;
+  position: fixed;
+  top: 70px;
+  right: -400px;
+  bottom: 0;
+  z-index: 1050;
+  transition: .5s;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  overflow: hidden;
+}
+
+.savedTab {
+  background-color: #111;
+}
+
+body.showCart .cartTab,
+body.showSaved .savedTab {
+  right: 0;
+}
+
+.cartTab h1,
+.savedTab h1 {
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.cartTab .ListCart,
+.savedTab .ListSaved {
+  overflow-y: auto;
+}
+
+.cartTab .ListCart::-webkit-scrollbar,
+.savedTab .ListSaved::-webkit-scrollbar {
+  width: 0;
+}
+
+.cartTab .ListCart .item,
+.savedTab .ListSaved .item {
+  display: grid;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.cartTab .ListCart .item {
+  grid-template-columns: 70px 150px 50px 1fr;
+}
+
+.savedTab .ListSaved .item {
+  grid-template-columns: 70px 1fr 40px;
+}
+
+.cartTab .ListCart .item img,
+.savedTab .ListSaved .item img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #eee;
+  color: #000;
+  cursor: pointer;
+}
+
+.cartTab .btn,
+.savedTab .btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab .btn button,
+.savedTab .btn button {
+  background-color: var(--accent);
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cartTab .btn .close,
+.savedTab .btn .closeSaved {
+  background-color: white;
 }
 
 /* ── Layout ───────────────────────────── */
