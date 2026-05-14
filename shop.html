@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — NOVA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Assets/Styles/style.css">
+  <link rel="stylesheet" href="Assets/Styles/shop.css">
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-dark px-4 py-3">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand me-auto" href="Index.html"><label style="cursor:pointer">Logo</label></a>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form class="d-flex flex-grow-1 mx-4" role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
+          </form>
+          <ul class="navbar-nav d-flex flex-row align-items-center gap-2 ms-auto">
+            <li class="nav-item"><a class="nav-link" href="Index.html"><i class="fa-solid fa-house fa-2x"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="account.html"><i class="fa-solid fa-circle-user fa-2x"></i></a></li>
+            <li class="nav-item"><a class="nav-link open-saved" href="#"><i class="fa-solid fa-heart fa-2x"></i><span class="badge-count">0</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-basket-shopping fa-2x icon-cart"></i><span class="badge-count">0</span></a></li>
+            <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="Login-Button">Login</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Cart Panel ── -->
+  <div class="cartTab">
+    <h1>Shopping Cart</h1>
+    <div class="ListCart"></div>
+    <div class="btn">
+      <button class="close">CLOSE</button>
+      <button class="checkOut">CHECK OUT</button>
+    </div>
+  </div>
+
+  <!-- ── Saved Panel ── -->
+  <div class="savedTab">
+    <h1>Saved Items</h1>
+    <div class="ListSaved"></div>
+    <div class="btn">
+      <button class="closeSaved">CLOSE</button>
+      <button class="moveAllToCart">ADD ALL TO CART</button>
+    </div>
+  </div>
+
+  <!-- ── Page ── -->
+  <div class="shop-page">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+      <span><a href="Index.html">Home</a></span>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span class="current">All Products</span>
+    </div>
+
+    <div class="shop-layout">
+
+      <!-- ══ SIDEBAR ══ -->
+      <aside class="shop-sidebar">
+
+        <!-- Mobile filter toggle -->
+        <button class="filter-toggle" id="filterToggle">
+          <i class="fa-solid fa-sliders"></i> Filters
+          <i class="fa-solid fa-chevron-down toggle-icon"></i>
+        </button>
+
+        <div class="sidebar-inner" id="sidebarInner">
+
+          <!-- Category -->
+          <div class="filter-group">
+            <h4 class="filter-heading">Category</h4>
+            <ul class="filter-list">
+              <li><label class="filter-radio active-radio" data-filter="category" data-value="all">
+                <input type="radio" name="category" value="all" checked> All
+              </label></li>
+              <li><label class="filter-radio" data-filter="category" data-value="jacket">
+                <input type="radio" name="category" value="jacket"> Jackets
+              </label></li>
+              <li><label class="filter-radio" data-filter="category" data-value="hoodie">
+                <input type="radio" name="category" value="hoodie"> Hoodies
+              </label></li>
+              <li><label class="filter-radio" data-filter="category" data-value="vest">
+                <input type="radio" name="category" value="vest"> Vests
+              </label></li>
+            </ul>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Price -->
+          <div class="filter-group">
+            <h4 class="filter-heading">Price</h4>
+            <ul class="filter-list">
+              <li><label class="filter-radio active-radio" data-filter="price" data-value="all">
+                <input type="radio" name="price" value="all" checked> All
+              </label></li>
+              <li><label class="filter-radio" data-filter="price" data-value="under200">
+                <input type="radio" name="price" value="under200"> Under $200
+              </label></li>
+              <li><label class="filter-radio" data-filter="price" data-value="200-300">
+                <input type="radio" name="price" value="200-300"> $200 – $300
+              </label></li>
+              <li><label class="filter-radio" data-filter="price" data-value="over300">
+                <input type="radio" name="price" value="over300"> Over $300
+              </label></li>
+            </ul>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Size -->
+          <div class="filter-group">
+            <h4 class="filter-heading">Size</h4>
+            <div class="size-chips">
+              <button class="size-chip active" data-size="all">All</button>
+              <button class="size-chip" data-size="XS">XS</button>
+              <button class="size-chip" data-size="S">S</button>
+              <button class="size-chip" data-size="M">M</button>
+              <button class="size-chip" data-size="L">L</button>
+              <button class="size-chip" data-size="XL">XL</button>
+            </div>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Color -->
+          <div class="filter-group">
+            <h4 class="filter-heading">Color</h4>
+            <div class="color-dots">
+              <button class="color-dot active" data-color="all" style="background:#ccc" title="All"></button>
+              <button class="color-dot" data-color="black"  style="background:#1a1a1a" title="Black"></button>
+              <button class="color-dot" data-color="green"  style="background:#3a5a40" title="Green"></button>
+              <button class="color-dot" data-color="grey"   style="background:#9e9e9e" title="Grey"></button>
+              <button class="color-dot" data-color="white"  style="background:#f0ede8;border-color:#ccc" title="White"></button>
+              <button class="color-dot" data-color="rust"   style="background:#b5451b" title="Rust"></button>
+            </div>
+          </div>
+
+          <button class="reset-filters" id="resetFilters">
+            <i class="fa-solid fa-rotate-left"></i> Reset Filters
+          </button>
+
+        </div>
+      </aside>
+
+      <!-- ══ MAIN CONTENT ══ -->
+      <div class="shop-main">
+
+        <!-- Toolbar -->
+        <div class="shop-toolbar">
+          <p class="results-count" id="resultsCount">Showing <strong>0</strong> products</p>
+
+          <div class="toolbar-right">
+            <div class="sort-wrap">
+              <label class="sort-label">Sort by</label>
+              <select id="sortSelect" class="sort-select">
+                <option value="default">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Name: A–Z</option>
+              </select>
+            </div>
+
+            <div class="view-toggle">
+              <button class="view-btn active" data-view="grid3" title="3 columns">
+                <i class="fa-solid fa-grip"></i>
+              </button>
+              <button class="view-btn" data-view="grid2" title="2 columns">
+                <i class="fa-solid fa-table-columns"></i>
+              </button>
+              <button class="view-btn" data-view="list" title="List">
+                <i class="fa-solid fa-list"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="productGrid"></div>
+
+        <!-- Empty state -->
+        <div class="empty-state" id="emptyState" style="display:none">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>No products match your filters.</p>
+          <button class="reset-filters-inline" id="resetFiltersInline">Clear Filters</button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-bar" id="paginationBar"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="Assets/Scripts/shop.js"></script>
+</body>
+</html>
