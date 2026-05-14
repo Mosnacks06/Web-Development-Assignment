@@ -78,10 +78,10 @@
           <div class="avatar-upload-info">
             <h4>Profile Photo</h4>
             <p>JPG or PNG. Max 2MB.</p>
-            <button class="btn-ghost" onclick="document.getElementById('avatarInput').click()">
+            <button class="btn-ghost" id="uploadPhotoBtn">
               <i class="fa-solid fa-upload"></i> Upload Photo
             </button>
-            <input type="file" id="avatarInput" accept="image/*" style="display:none" onchange="handleAvatarUpload(this)">
+            <input type="file" id="avatarInput" accept="image/*" style="display:none">
           </div>
         </div>
  
@@ -122,10 +122,10 @@
         </div>
  
         <div style="display:flex; gap:12px; margin-top:8px;">
-          <button class="btn-primary-nova" onclick="saveProfile()">
+          <button class="btn-primary-nova" id="saveProfileBtn">
             <i class="fa-solid fa-check"></i> Save Changes
           </button>
-          <button class="btn-ghost" onclick="resetProfile()">Discard</button>
+          <button class="btn-ghost" id="discardProfileBtn">Discard</button>
         </div>
       </div>
  
@@ -139,7 +139,7 @@
             <label>Current Password</label>
             <div class="input-wrap">
               <input type="password" id="currentPw" placeholder="Enter current password">
-              <i class="fa-solid fa-eye toggle-pw" onclick="togglePw('currentPw', this)"></i>
+              <i class="fa-solid fa-eye toggle-pw" data-target="currentPw"></i>
             </div>
           </div>
         </div>
@@ -148,8 +148,8 @@
           <div class="field">
             <label>New Password</label>
             <div class="input-wrap">
-              <input type="password" id="newPw" placeholder="Min. 8 characters" oninput="checkStrength(this.value)">
-              <i class="fa-solid fa-eye toggle-pw" onclick="togglePw('newPw', this)"></i>
+              <input type="password" id="newPw" placeholder="Min. 8 characters">
+              <i class="fa-solid fa-eye toggle-pw" data-target="newPw"></i>
             </div>
             <div class="pw-strength"><div class="pw-strength-bar" id="strengthBar"></div></div>
             <p class="pw-hint" id="strengthHint">Use 8+ chars, uppercase, number & symbol</p>
@@ -161,13 +161,13 @@
             <label>Confirm New Password</label>
             <div class="input-wrap">
               <input type="password" id="confirmPw" placeholder="Repeat new password">
-              <i class="fa-solid fa-eye toggle-pw" onclick="togglePw('confirmPw', this)"></i>
+              <i class="fa-solid fa-eye toggle-pw" data-target="confirmPw"></i>
             </div>
           </div>
         </div>
  
         <div style="margin-top:8px;">
-          <button class="btn-primary-nova" onclick="changePassword()">
+          <button class="btn-primary-nova" id="changePasswordBtn">
             <i class="fa-solid fa-lock"></i> Update Password
           </button>
         </div>
@@ -214,21 +214,21 @@
           <div class="field-group full">
             <div class="field">
               <label>Cardholder Name</label>
-              <input type="text" id="cardName" placeholder="John Doe" oninput="updatePreview()">
+              <input type="text" id="cardName" placeholder="John Doe">
             </div>
           </div>
  
           <div class="field-group full">
             <div class="field">
               <label>Card Number</label>
-              <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCardNumber(this); updatePreview()">
+              <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
             </div>
           </div>
  
           <div class="field-group">
             <div class="field">
               <label>Expiry Date</label>
-              <input type="text" id="cardExpiry" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this); updatePreview()">
+              <input type="text" id="cardExpiry" placeholder="MM / YY" maxlength="7">
             </div>
             <div class="field">
               <label>CVV</label>
@@ -244,10 +244,10 @@
           </div>
  
           <div style="display:flex; gap:12px; margin-top:8px;">
-            <button class="btn-primary-nova" onclick="saveCard()">
+            <button class="btn-primary-nova" id="saveCardBtn">
               <i class="fa-solid fa-plus"></i> Add Card
             </button>
-            <button class="btn-ghost" onclick="toggleAddCardForm(false)">Cancel</button>
+            <button class="btn-ghost" id="cancelCardBtn">Cancel</button>
           </div>
         </div>
       </div>
@@ -256,13 +256,7 @@
       <div class="section-panel" id="tab-orders">
         <p class="panel-title">Orders</p>
         <p class="panel-subtitle">Your recent purchases</p>
-        <div style="text-align:center; padding:80px 0; color:var(--muted);">
-          <i class="fa-solid fa-box-open" style="font-size:3rem; margin-bottom:16px; display:block;"></i>
-          <p style="font-size:14px;">No orders yet. Start shopping!</p>
-          <a href="product.html" class="btn-primary-nova" style="display:inline-flex; margin-top:20px; text-decoration:none;">
-            <i class="fa-solid fa-bag-shopping"></i> Browse Products
-          </a>
-        </div>
+        <div id="ordersList"></div>
       </div>
  
     </main>
@@ -272,8 +266,7 @@
   <div class="toast-wrap" id="toastWrap"></div>
 
    <!-- Page script -->
-<script src="Assets/Scripts/account.js"></script>
->
+<script src="scripts/account.js"></script>
 
   </body>
   

@@ -55,7 +55,7 @@ const addDataToHTML = () => {
     col.classList.add('col-md-4');
     col.innerHTML = `
       <div class="card border-0 rounded-0 shadow h-100">
-        <a href="product-detail.html?id=${product.id}">
+        <a href="product.html?id=${product.id}">
           <img src="${product.image}" class="card-img-top rounded-0" alt="${product.name}" style="cursor:pointer;">
         </a>
         <div class="card-body my-3">

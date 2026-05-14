@@ -2,20 +2,74 @@
   {
     "id": 1,
     "name": "Cool Jacket",
+    "category": "jacket",
     "price": 350,
-    "image": "Assets/Images/Jacket display 2.webp"
+    "oldPrice": 410,
+    "badge": "Sale",
+    "image": "Assets/Images/Jacket display 2.webp",
+    "images": [
+      "Assets/Images/Jacket display 2.webp",
+      "Assets/Images/Jacket display.jpg"
+    ],
+    "description": "A weather-ready jacket with a structured fit, warm lining, and practical storage for cold outdoor days.",
+    "sizes": [
+      { "label": "XS", "available": true },
+      { "label": "S", "available": true },
+      { "label": "M", "available": true },
+      { "label": "L", "available": true },
+      { "label": "XL", "available": false }
+    ],
+    "colors": [
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Green", "hex": "#3a5a40" }
+    ]
   },
   {
     "id": 2,
     "name": "Trail Vest",
+    "category": "vest",
     "price": 180,
-    "image": "Assets/Images/Jacket display 2.webp"
+    "image": "Assets/Images/Bag display.webp",
+    "images": [
+      "Assets/Images/Bag display.webp",
+      "Assets/Images/camping.webp"
+    ],
+    "description": "A lightweight layer for quick hikes, travel days, and changing weather.",
+    "sizes": [
+      { "label": "XS", "available": false },
+      { "label": "S", "available": true },
+      { "label": "M", "available": true },
+      { "label": "L", "available": true },
+      { "label": "XL", "available": true }
+    ],
+    "colors": [
+      { "name": "Rust", "hex": "#b5451b" },
+      { "name": "Grey", "hex": "#9e9e9e" }
+    ]
   },
   {
     "id": 3,
     "name": "Alpine Hoodie",
+    "category": "hoodie",
     "price": 220,
-    "image": "Assets/Images/Jacket display 2.webp"
+    "badge": "New",
+    "image": "Assets/Images/AND_WANDER_1.webp",
+    "images": [
+      "Assets/Images/AND_WANDER_1.webp",
+      "Assets/Images/Camping main page.jpg"
+    ],
+    "description": "A soft technical hoodie with a relaxed fit, made for layering before and after the trail.",
+    "sizes": [
+      { "label": "XS", "available": true },
+      { "label": "S", "available": true },
+      { "label": "M", "available": true },
+      { "label": "L", "available": false },
+      { "label": "XL", "available": true }
+    ],
+    "colors": [
+      { "name": "White", "hex": "#f0ede8" },
+      { "name": "Grey", "hex": "#9e9e9e" }
+    ]
   }
 ]
 

@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.animationDelay = `${i * 60}ms`;
 
       card.innerHTML = `
-        <a href="product-detail.html?id=${product.id}" style="text-decoration:none;color:inherit;">
+        <a href="product.html?id=${product.id}" style="text-decoration:none;color:inherit;">
           <div class="card-img-wrap">
             <img src="${img}" alt="${product.name}"
                  onmouseover="this.src='${img2}'"
