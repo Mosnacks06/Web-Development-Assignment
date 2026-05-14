@@ -2,6 +2,13 @@
    LOGIN BUTTON STYLES
    ======================================== */
 
+@font-face {
+    font-family: 'Moses Font';
+    src: url("../Font/Moses's Font.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     scrollbar-gutter: stable;
 }
@@ -48,6 +55,17 @@ html {
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, .72);
     font-weight: 500;
+}
+
+.nova-font {
+    font-family: 'Moses Font', 'Bebas Neue', sans-serif;
+    letter-spacing: .08em;
+}
+
+.navbar .navbar-brand .nova-font {
+    color: #e8bc0e;
+    font-size: 1.6rem;
+    line-height: 1;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,

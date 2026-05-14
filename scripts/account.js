@@ -473,6 +473,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Init ──────────────────────────────────────────────────────────────────────
+  // Contact form
+  $('sendContactBtn')?.addEventListener('click', () => {
+    const email = $('contactEmail').value.trim();
+    const message = $('contactMessage').value.trim();
+
+    if (!email) return showToast('Enter your email address', true);
+    if (!email.includes('@')) return showToast('Enter a valid email address', true);
+    if (!message) return showToast('Tell us why you need to contact us', true);
+
+    $('contactMessage').value = '';
+    showToast('Message sent successfully');
+  });
+
+  $('clearContactBtn')?.addEventListener('click', () => {
+    $('contactEmail').value = '';
+    $('contactMessage').value = '';
+  });
+
   renderPaymentGrid();
   renderOrders();
 

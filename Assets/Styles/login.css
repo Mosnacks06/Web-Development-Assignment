@@ -1,0 +1,322 @@
+:root {
+  --bg: #0e0e0e;
+  --surface: #161616;
+  --surface2: #1e1e1e;
+  --border: #2a2a2a;
+  --accent: #e8bc0e;
+  --text: #f0ede8;
+  --muted: #888;
+  --danger: #e05;
+  --success: #2ecc71;
+  --radius: 2px;
+}
+
+@font-face {
+  font-family: 'Moses Font';
+  src: url("../Font/Moses's Font.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.Login-Button {
+  background-color: var(--accent);
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color .2s, opacity .2s;
+}
+
+.Login-Button:hover,
+.Login-Button.active {
+  background-color: #ffd336;
+  color: #000;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--border);
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: rgba(255,255,255,.72);
+}
+
+.nova-font {
+  font-family: 'Moses Font', 'Bebas Neue', sans-serif;
+  letter-spacing: .08em;
+}
+
+.navbar .navbar-brand .nova-font {
+  color: var(--accent);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--accent);
+}
+
+.navbar .offcanvas {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.navbar .form-control {
+  background: var(--surface2);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.navbar .form-control::placeholder {
+  color: var(--muted);
+}
+
+.badge-count {
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--accent);
+  color: #000;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -4px;
+  vertical-align: top;
+}
+
+.login-page {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(320px, 520px);
+  min-height: calc(100vh - 80px);
+}
+
+.login-visual {
+  background:
+    linear-gradient(90deg, rgba(14,14,14,.2), rgba(14,14,14,.78)),
+    url('../Images/AND_WANDER_1.webp');
+  background-position: center;
+  background-size: cover;
+}
+
+.login-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: var(--bg);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.login-card h1 {
+  color: var(--text);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  letter-spacing: .08em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.login-copy {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.field label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.field input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  padding: 14px 16px;
+  transition: border-color .2s;
+  width: 100%;
+}
+
+.field input:focus {
+  border-color: var(--accent);
+}
+
+.field input::placeholder {
+  color: var(--muted);
+}
+
+.password-wrap {
+  position: relative;
+}
+
+.password-wrap input {
+  padding-right: 48px;
+}
+
+.toggle-password {
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 46px;
+}
+
+.toggle-password:hover {
+  color: var(--text);
+}
+
+.login-options {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.remember {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-size: 13px;
+  gap: 8px;
+}
+
+.remember input {
+  accent-color: var(--accent);
+}
+
+.login-options a,
+.signup-note a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.login-options a:hover,
+.signup-note a:hover {
+  text-decoration: underline;
+}
+
+.form-message {
+  color: var(--danger);
+  font-size: 13px;
+  min-height: 20px;
+  margin-bottom: 14px;
+}
+
+.form-message.success {
+  color: var(--success);
+}
+
+.btn-login {
+  align-items: center;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 8px;
+  justify-content: center;
+  letter-spacing: .1em;
+  padding: 15px 32px;
+  text-transform: uppercase;
+  transition: opacity .2s, transform .1s;
+  width: 100%;
+}
+
+.btn-login:hover {
+  opacity: .88;
+}
+
+.btn-login:active {
+  transform: scale(.98);
+}
+
+.signup-note {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 22px;
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-visual {
+    min-height: 220px;
+  }
+
+  .login-panel {
+    padding: 36px 24px 48px;
+  }
+
+  .login-card h1 {
+    font-size: 3.2rem;
+  }
+}

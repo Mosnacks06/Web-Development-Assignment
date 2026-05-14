@@ -4,6 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap');
 
+@font-face {
+  font-family: 'Moses Font';
+  src: url("../Font/Moses's Font.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --bg: #0e0e0e;
   --surface: #161616;
@@ -57,6 +64,17 @@ body {
 .navbar .navbar-brand,
 .navbar .nav-link {
   color: rgba(255,255,255,.72);
+}
+
+.nova-font {
+  font-family: 'Moses Font', 'Bebas Neue', sans-serif;
+  letter-spacing: .08em;
+}
+
+.navbar .navbar-brand .nova-font {
+  color: var(--accent);
+  font-size: 1.6rem;
+  line-height: 1;
 }
 
 .navbar .nav-link:hover,
@@ -364,7 +382,8 @@ body.showSaved .savedTab {
 }
 
 .field input,
-.field select {
+.field select,
+.field textarea {
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text);
@@ -378,10 +397,17 @@ body.showSaved .savedTab {
 }
 
 .field input:focus,
-.field select:focus { border-color: var(--accent); }
+.field select:focus,
+.field textarea:focus { border-color: var(--accent); }
 
-.field input::placeholder { color: var(--muted); }
+.field input::placeholder,
+.field textarea::placeholder { color: var(--muted); }
 .field select option { background: var(--surface); }
+
+.field textarea {
+  min-height: 180px;
+  resize: vertical;
+}
 
 .field .input-wrap { position: relative; }
 .field .input-wrap input { padding-right: 44px; }
